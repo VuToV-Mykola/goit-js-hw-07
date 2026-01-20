@@ -24,9 +24,9 @@
 
 ## About
 
-GoIT Homework-JS #7 focuses on DOM manipulation and event handling. Use the provided Figma layout to style the markup for the tasks.
+GoIT Homework-JS #7 focuses on DOM manipulation and event handling. Use the provided Figma layout to style the task markup. Do not change the HTML structure in task files.
 
-Figma layout: https://www.figma.com/design/m8k9NQV7qZrtYDCvxfD68B/HW-JavaScript?node-id=0-1&p=f
+Figma layout: https://www.figma.com/design/m8k9NQV7qZrtYDCvxfD68B/HW-JavaScript?node-id=0-1&p=f  
 Homework brief: https://www.edu.goit.global/ru/learn/35708569/18936918/19852907/homework
 
 ## Task 1. Categories
@@ -51,7 +51,7 @@ Using DOM properties and methods, write a script that:
 
 **Complete this task in `js/task-2.js`.**
 
-Create a gallery from the `images` array:
+Create a gallery from the `images` array and add it to `ul.gallery`:
 
 - Create `<img>` elements inside `<li>` elements based on the data
 - Insert all gallery items into the DOM with one operation
