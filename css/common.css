@@ -57,6 +57,51 @@ li a {
   margin-bottom: 16px;
 }
 
+body:has(> ul:only-child) {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+body > ul:only-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px;
+  max-width: 320px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+body > ul li a {
+  display: block;
+  padding: 12px 16px;
+  margin-bottom: 0;
+  text-align: center;
+  border-radius: 8px;
+  background: transparent;
+  box-shadow: none;
+  transition: background 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body > ul li a:hover,
+body > ul li a:focus {
+  background: rgba(0, 0, 0, 0.04);
+  box-shadow: none;
+}
+
+body > ul li a:active {
+  background: rgba(0, 0, 0, 0.08);
+}
+
 button {
   -webkit-appearance: none;
   -moz-appearance: none;
