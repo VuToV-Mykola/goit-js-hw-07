@@ -1,33 +1,10 @@
-'use strict';
-// Task 3. String Builder
-class StringBuilder {
-  #value;
+const nameInput = document.querySelector('#name-input');
+const nameOutput = document.querySelector('#name-output');
 
-  constructor(initialValue) {
-    this.#value = initialValue;
-  }
-  getValue() {
-    return this.#value;
-  }
-  padEnd(str) {
-    this.#value += str;
-  }
-  padStart(str) {
-    this.#value = str + this.#value;
-  }
-  padBoth(str) {
-    this.#value = str + this.#value + str;
-  }
-}
+const handleNameInput = (event) => {
+  const trimmedValue = event.currentTarget.value.trim();
+  event.currentTarget.value = trimmedValue;
+  nameOutput.textContent = trimmedValue === '' ? 'Anonymous' : trimmedValue;
+};
 
-const builder = new StringBuilder('.');
-console.log(builder.getValue()); // "."
-
-builder.padStart('^');
-console.log(builder.getValue()); // "^."
-
-builder.padEnd('^');
-console.log(builder.getValue()); // "^.^"
-
-builder.padBoth('=');
-console.log(builder.getValue()); // "=^.^="
+nameInput.addEventListener('input', handleNameInput);
